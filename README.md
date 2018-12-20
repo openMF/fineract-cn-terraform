@@ -22,42 +22,34 @@ terraform init
 terraform plan
 terraform apply
 ```
-
-`cd environments/poc/`
-
-`terraform init`
-
-`terraform plan`
-
-`terraform apply`
-
+```
+cd environments/poc/
+terraform init
+terraform plan
+terraform apply
+```
 
 For removing the infrastructure:
-
-`cd environments/poc/`
-
-`terraform destroy`
-
-
-`cd environments/poc-tfstate/`
-
-`terraform destroy` - it might throw error. In that case remove the S3 bucket and DynamoDB table manually.
+```
+cd environments/poc/
+terraform destroy
+```
+```
+cd environments/poc-tfstate/
+terraform destroy
+```
+It might throw error. In that case remove the S3 bucket and DynamoDB table manually.
 
 Error cases:
 If `terraform init`, `terraform plan`, `terraform apply` commands do not run, but the infrastructure is destroyed, it might be necessary to manually clean up the environments folder. For this:
-
-`cd environments/poc-tfstate/`
-
-`rm terraform.tfstate`
-
-`rm -r .terraform/`
-
-
-
-`cd environments/poc/`
-
-`rm terraform.tfstate`
-
-`rm -r .terraform/`
-
+```
+cd environments/poc-tfstate/
+rm terraform.tfstate
+rm -r .terraform/
+```
+```
+cd environments/poc/
+rm terraform.tfstate
+rm -r .terraform/
+```
 Then retry terraform commands.
