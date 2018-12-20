@@ -16,15 +16,24 @@ Set the desired region, project, environment values for variables in the followi
 * `environments/poc-tfstate/terraform.tfvars`
 
 Run the following commands:
+
 `cd environments/poc-tfstate/`
+
 `terraform init`
+
 `terraform plan`
+
 `terraform apply`
 
+
 `cd environments/poc/`
+
 `terraform init`
+
 `terraform plan`
+
 `terraform apply`
+
 
 For removing the infrastructure:
 `cd environments/poc/`
