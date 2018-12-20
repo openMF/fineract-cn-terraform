@@ -36,10 +36,14 @@ Run the following commands:
 
 
 For removing the infrastructure:
+
 `cd environments/poc/`
+
 `terraform destroy`
 
+
 `cd environments/poc-tfstate/`
+
 `terraform destroy` - it might throw error. In that case remove the S3 bucket and DynamoDB table manually.
 
 Error cases:
