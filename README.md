@@ -48,12 +48,19 @@ For removing the infrastructure:
 
 Error cases:
 If `terraform init`, `terraform plan`, `terraform apply` commands do not run, but the infrastructure is destroyed, it might be necessary to manually clean up the environments folder. For this:
+
 `cd environments/poc-tfstate/`
+
 `rm terraform.tfstate`
+
 `rm -r .terraform/`
 
+
+
 `cd environments/poc/`
+
 `rm terraform.tfstate`
+
 `rm -r .terraform/`
 
 Then retry terraform commands.
